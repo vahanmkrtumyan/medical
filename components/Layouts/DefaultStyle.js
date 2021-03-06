@@ -90,148 +90,63 @@ class DefaultStyleThree extends React.Component {
                   </li>
 
                   <li className="nav-item">
-                    <Link activeClassName="active" href="#">
+                    <Link activeClassName="active" href="/services">
                       <a href="#" className="nav-link">
-                        Pages <Icon.ChevronDown />
+                        Services
                       </a>
                     </Link>
-                    <ul className="dropdown_menu">
-                      <li className="nav-item">
-                        <Link activeClassName="active" href="/features">
-                          <a className="nav-link">Features</a>
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link activeClassName="active" href="#">
-                          <a className="nav-link">Services</a>
-                        </Link>
-                        <ul className="dropdown_menu">
-                          <li className="nav-item">
-                            <Link activeClassName="active" href="/services">
-                              <a className="nav-link">Services</a>
-                            </Link>
-                          </li>
-
-                          <li className="nav-item">
-                            <Link
-                              activeClassName="active"
-                              href="/service-details"
-                            >
-                              <a className="nav-link">Service Details</a>
-                            </Link>
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link activeClassName="active" href="#">
-                          <a className="nav-link">Project</a>
-                        </Link>
-                        <ul className="dropdown_menu">
-                          <li className="nav-item">
-                            <Link activeClassName="active" href="/project">
-                              <a className="nav-link">Project</a>
-                            </Link>
-                          </li>
-
-                          <li className="nav-item">
-                            <Link
-                              activeClassName="active"
-                              href="/project-details"
-                            >
-                              <a className="nav-link">Project Details</a>
-                            </Link>
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link activeClassName="active" href="/team">
-                          <a className="nav-link">Team</a>
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link activeClassName="active" href="/pricing">
-                          <a className="nav-link">Pricing</a>
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link activeClassName="active" href="/faq">
-                          <a className="nav-link">FAQ</a>
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link activeClassName="active" href="/coming-soon">
-                          <a className="nav-link">Coming Soon</a>
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link activeClassName="active" href="/error">
-                          <a className="nav-link">Error Status</a>
-                        </Link>
-                      </li>
-                    </ul>
                   </li>
 
                   <li className="nav-item">
-                    <a href="#" className="nav-link">
-                      Shop <Icon.ChevronDown />
+                    <a href="/products" className="nav-link">
+                      Products
+                    </a>
+                  </li>
+
+                  <li className="nav-item">
+                    <Link activeClassName="active" href="/blog">
+                      <a className="nav-link">Blog</a>
+                    </Link>
+                  </li>
+
+                  <li className="nav-item">
+                    <a href="/products" className="nav-link">
+                      Language <Icon.ChevronDown />
                     </a>
                     <ul className="dropdown_menu">
                       <li className="nav-item">
                         <Link activeClassName="active" href="/products">
-                          <a className="nav-link">Products</a>
+                          <a className="nav-link">Հայերեն</a>
                         </Link>
                       </li>
 
                       <li className="nav-item">
                         <Link activeClassName="active" href="/product-details">
-                          <a className="nav-link">Products Details</a>
+                          <a className="nav-link">Eanglish</a>
+                        </Link>
+                      </li>
+                      <li className="nav-item">
+                        <Link activeClassName="active" href="/product-details">
+                          <a className="nav-link">Русский</a>
                         </Link>
                       </li>
                     </ul>
                   </li>
 
-                  <li className="nav-item">
-                    <Link activeClassName="active" href="#">
-                      <a className="nav-link">
-                        Blog <Icon.ChevronDown />
-                      </a>
-                    </Link>
-                    <ul className="dropdown_menu">
-                      <li className="nav-item">
-                        <Link activeClassName="active" href="/blog">
-                          <a className="nav-link">Blog</a>
-                        </Link>
-                      </li>
-
-                      <li className="nav-item">
-                        <Link activeClassName="active" href="/blog-details">
-                          <a className="nav-link">Blog Details</a>
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <Link activeClassName="active" href="/contact">
                       <a className="nav-link">Contact</a>
                     </Link>
-                  </li>
+                  </li> */}
 
-                  <li className="nav-item cart-wrapper">
+                  {/* <li className="nav-item cart-wrapper">
                     <Link href="/cart">
                       <a className="nav-link">
                         <Icon.ShoppingCart />
                         <span>{products.length}</span>
                       </a>
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
 
