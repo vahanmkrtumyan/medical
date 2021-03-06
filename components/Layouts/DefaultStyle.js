@@ -18,13 +18,13 @@ class DefaultStyleThree extends React.Component {
   componentDidMount() {
     let elementId = document.getElementById("navbar");
     document.addEventListener("scroll", () => {
-      if (window.scrollY > 170) {
+      if (window && window.scrollY > 170) {
         elementId.classList.add("is-sticky");
       } else {
         elementId.classList.remove("is-sticky");
       }
     });
-    window.scrollTo(0, 0);
+    window && window.scrollTo(0, 0);
   }
 
   render() {
