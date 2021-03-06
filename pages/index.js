@@ -1,7 +1,7 @@
 import React from "react";
 import { Preloader, Placeholder } from "react-preloading-screen";
 import NoSSR from "react-no-ssr";
-import HeaderThree from "../components/Layouts/HeaderThree";
+import HeaderThree from "../components/Layouts/Header";
 import MainBanner from "../components/home-eight/MainBanner";
 import WhatWeOffer from "../components/home-eight/WhatWeOffer";
 import AboutArea from "../components/home-eight/AboutArea";
