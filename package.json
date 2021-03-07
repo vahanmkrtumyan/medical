@@ -23,13 +23,8 @@
     "es6-promise": "^4.2.8",
     "express": "^4.17.1",
     "google-map-react": "^1.1.5",
-    "imagemin-gifsicle": "^6.0.1",
-    "imagemin-mozjpeg": "^8.0.0",
-    "imagemin-optipng": "^6.0.0",
-    "imagemin-svgo": "^7.0.0",
     "isomorphic-fetch": "^2.2.1",
     "next": "^10.0.8",
-    "next-i18next": "^0.37.0",
     "next-images": "^1.4.0",
     "next-redux-wrapper": "^3.0.0",
     "next-seo": "^3.1.0",
@@ -55,8 +50,7 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
     "stripe": "^7.14.0",
-    "svg-sprite-loader": "^4.1.6",
-    "webp-loader": "^0.6.0"
+    "svg-sprite-loader": "^4.1.6"
   },
   "devDependencies": {
     "file-loader": "^6.0.0",

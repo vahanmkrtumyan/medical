@@ -5,6 +5,11 @@ import { useRouter } from "next/router";
 import en from "../../static/locales/en";
 import hy from "../../static/locales/hy";
 import ru from "../../static/locales/ru";
+import armenia from "../../static/images/armenia.svg";
+import russia from "../../static/images/russia.svg";
+import uk from "../../static/images/united-kingdom.svg";
+// import russia from '../../static/locales/russia';
+// import gb from '../../static/locales';
 
 export default function DefaultStyle() {
   const [collapsed, setCollapsed] = useState(false);
@@ -16,7 +21,14 @@ export default function DefaultStyle() {
     ru,
     en,
   };
-  const t = () => locales[locale];
+
+  const images = {
+    hy: armenia,
+    ru: russia,
+    en: uk,
+  };
+
+  const t = (verse) => locales[locale][verse];
 
   console.log(t("title"));
 
@@ -83,40 +95,45 @@ export default function DefaultStyle() {
                       href=""
                       className="nav-link"
                     >
-                      Home
+                      {t("home")}
                     </a>
                   </Link>
                 </li>
 
                 <li className="nav-item">
                   <Link activeClassName="active" href="/about">
-                    <a className="nav-link">About</a>
+                    <a className="nav-link">{t("about")}</a>
                   </Link>
                 </li>
 
                 <li className="nav-item">
                   <Link activeClassName="active" href="/services">
                     <a href="#" className="nav-link">
-                      Services
+                      {t("services")}
                     </a>
                   </Link>
                 </li>
 
                 <li className="nav-item">
                   <a href="/products" className="nav-link">
-                    Products
+                    {t("products")}
                   </a>
                 </li>
 
                 <li className="nav-item">
                   <Link activeClassName="active" href="/blog">
-                    <a className="nav-link">Blog</a>
+                    <a className="nav-link">{t("blog")}</a>
                   </Link>
                 </li>
 
                 <li className="nav-item">
-                  <a href="/products" className="nav-link">
-                    Language <Icon.ChevronDown />
+                  <a
+                    href="/products"
+                    className="nav-link"
+                    style={{ display: "flex", alignItems: "center" }}
+                  >
+                    <img style={{ height: "16px" }} src={images[locale]} />{" "}
+                    <Icon.ChevronDown />
                   </a>
                   <ul className="dropdown_menu">
                     <li className="nav-item">
@@ -157,7 +174,7 @@ export default function DefaultStyle() {
 
             <div className="others-option">
               <Link href="/contact">
-                <a className="btn btn-gradient">Contact Us</a>
+                <a className="btn btn-gradient">{t("contact")}</a>
               </Link>
             </div>
           </nav>
