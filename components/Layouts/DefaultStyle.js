@@ -8,11 +8,9 @@ import ru from "../../static/locales/ru";
 import armenia from "../../static/images/armenia.svg";
 import russia from "../../static/images/russia.svg";
 import uk from "../../static/images/united-kingdom.svg";
-// import russia from '../../static/locales/russia';
-// import gb from '../../static/locales';
 
 export default function DefaultStyle() {
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
   const router = useRouter();
   let { pathname, locale } = router;
 
