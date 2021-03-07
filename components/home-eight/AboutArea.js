@@ -11,6 +11,8 @@ class AboutArea extends Component {
             <div className="col-lg-6 col-md-12">
               <div className="agency-about-img">
                 <Image
+                  width="832px"
+                  height="594px"
                   src={require("../../static/images/second.jpeg")}
                   alt="image"
                 />

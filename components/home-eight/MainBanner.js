@@ -26,6 +26,8 @@ class MainBanner extends Component {
             <div className="col-lg-6 col-md-12">
               <div className="agency-banner-image">
                 <Image
+                  width="932px"
+                  height="525px"
                   src={require("../../static/images/first.jpg")}
                   alt="image"
                 />
