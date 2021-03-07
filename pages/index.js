@@ -12,25 +12,28 @@ import BlogCard from "../components/home-eight/BlogCard";
 import AgencyCtaArea from "../components/home-eight/AgencyCtaArea";
 import Footer from "../components/Layouts/Footer";
 import GoTop from "../components/Layouts/GoTop";
+import NoSSR from "react-no-ssr";
 
 export default () => (
-  <Preloader>
-    <Placeholder>
-      <div className="preloader">
-        <div className="spinner"></div>
-      </div>
-    </Placeholder>
-    <HeaderThree />
-    <MainBanner />
-    <WhatWeOffer />
-    <AboutArea />
-    <Services />
-    <Funfacts />
-    <Projects />
-    <Feedback />
-    <BlogCard />
-    <AgencyCtaArea />
-    <Footer />
-    <GoTop scrollStepInPx="50" delayInMs="16.66" />
-  </Preloader>
+  <NoSSR>
+    <Preloader>
+      <Placeholder>
+        <div className="preloader">
+          <div className="spinner"></div>
+        </div>
+      </Placeholder>
+      <HeaderThree />
+      <MainBanner />
+      <WhatWeOffer />
+      <AboutArea />
+      <Services />
+      <Funfacts />
+      <Projects />
+      <Feedback />
+      <BlogCard />
+      <AgencyCtaArea />
+      <Footer />
+      <GoTop scrollStepInPx="50" delayInMs="16.66" />
+    </Preloader>
+  </NoSSR>
 );
