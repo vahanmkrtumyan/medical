@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 class MainBanner extends Component {
   render() {
@@ -24,7 +25,7 @@ class MainBanner extends Component {
 
             <div className="col-lg-6 col-md-12">
               <div className="agency-banner-image">
-                <img
+                <Image
                   src={require("../../static/images/first.jpg")}
                   alt="image"
                 />

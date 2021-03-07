@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 class AboutArea extends Component {
   render() {
@@ -9,7 +10,7 @@ class AboutArea extends Component {
           <div className="row align-items-center">
             <div className="col-lg-6 col-md-12">
               <div className="agency-about-img">
-                <img
+                <Image
                   src={require("../../static/images/second.jpeg")}
                   alt="image"
                 />
