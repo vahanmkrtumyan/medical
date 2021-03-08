@@ -22,6 +22,8 @@
     "bootstrap": "^4.4.1",
     "es6-promise": "^4.2.8",
     "express": "^4.17.1",
+    "firebase": "^8.2.10",
+    "firebaseui": "^4.7.3",
     "google-map-react": "^1.1.5",
     "isomorphic-fetch": "^2.2.1",
     "next": "^10.0.8",
