@@ -9,10 +9,18 @@ import Footer from "../components/Layouts/Footer";
 import GoTop from "../components/Layouts/GoTop";
 import PageTitle from "../components/admin/PageTitle";
 import firebase from "../firebase";
+import CategoryModal from "../components/admin/CategoryModal";
+import useCategories from "../components/admin/useCategories";
+import * as Icon from "react-feather";
 
 export default function admin() {
   const [user, setUser] = useState("");
+  const [categoryOpen, setCategoryOpen] = useState(false);
+  const categories = useCategories();
   const provider = new firebase.auth.GoogleAuthProvider();
+  var db = firebase.firestore();
+
+  console.log(categories);
 
   function SignIn() {
     firebase
@@ -58,14 +66,24 @@ export default function admin() {
 
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      console.log(user);
       setUser("signedIn");
     } else {
       setUser("signedOut");
     }
   });
 
-  console.log({ user });
+  function RemoveCategory(category) {
+    console.log(category);
+    db.collection("categories")
+      .doc(category.id)
+      .delete()
+      .then(() => {
+        console.log("Document successfully deleted!");
+      })
+      .catch((error) => {
+        console.error("Error removing document: ", error);
+      });
+  }
 
   return (
     <NoSSR>
@@ -76,26 +94,54 @@ export default function admin() {
       <div id="loader">Loading...</div> */}
       <div style={{ textAlign: "right", width: "95%" }}>
         {user === "signedOut" && (
-          <button type="submit" className="btn btn-primary" onClick={SignIn}>
+          <button className="btn btn-primary" onClick={SignIn}>
             SignIn
           </button>
         )}
         {user === "signedIn" && (
-          <button type="submit" className="btn btn-primary" onClick={SignOut}>
+          <button className="btn btn-primary" onClick={SignOut}>
             SignOut
           </button>
         )}
       </div>
-      <label>
-        Email Address <span className="required">*</span>
-      </label>
-      <input
-        type="email"
-        name="email"
-        className="form-control"
-        // onChange={handleOnChange}
-        // value={state.email.value}
-      />
+      <button className="btn btn-primary" onClick={() => setCategoryOpen(true)}>
+        Add a category
+      </button>
+      {categoryOpen && (
+        <CategoryModal closeModal={() => setCategoryOpen(false)} />
+      )}
+      <h1
+        style={{
+          margin: "24px",
+        }}
+      >
+        Categories
+      </h1>
+      <div
+        style={{
+          margin: "24px",
+          display: "flex",
+          columnGap: "16px",
+        }}
+      >
+        {categories.map((category) => (
+          <div
+            key={category.id}
+            style={{
+              border: "2px solid #44ce6f",
+              borderRadius: "24px",
+              display: "inline-block",
+              padding: "8px 16px",
+            }}
+          >
+            {category.name}{" "}
+            <Icon.X
+              style={{ cursor: "pointer" }}
+              onClick={() => RemoveCategory(category)}
+            />
+          </div>
+        ))}
+      </div>
 
       <Footer />
       <GoTop scrollStepInPx="50" delayInMs="16.66" />
