@@ -7,4 +7,6 @@ export default {
   blog: "Blog",
   contact: "Contact us",
   all: "All",
+  products: "Products",
+  productDetails: "Product details",
 };

@@ -1,10 +1,7 @@
-import React, { Component, useState, useEffect } from "react";
-import Link from "next/link";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { connect } from "react-redux";
-import * as Icon from "react-feather";
 import { ToastContainer, toast } from "react-toastify";
-import { addToCart } from "../../store/actions/cartActions";
 import QuickView from "./QuickView";
 import en from "../../static/locales/en";
 import hy from "../../static/locales/hy";
@@ -14,7 +11,7 @@ import { selectProduct } from "../../store/actions/cartActions";
 // import contentful from "contentful";
 var contentful = require("contentful");
 
-function Items({ addToCart, select }) {
+function Items({ select }) {
   var client = contentful.createClient({
     space: "tdncve35dqgo",
     accessToken: "Y5WOuE5deTa9j8BmOeH7fBBR045uEuBB6WU0cT9Qf2o",
@@ -33,7 +30,6 @@ function Items({ addToCart, select }) {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
   const [price, setPrice] = useState(0);
-  const [idd, setIdd] = useState(null);
 
   useEffect(() => {
     client
@@ -65,30 +61,12 @@ function Items({ addToCart, select }) {
   const router = useRouter();
   let { locale } = router;
 
-  const handleAddToCart = (id) => {
-    addToCart(id);
-    toast.success("Added to the cart", {
-      position: "bottom-left",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-    });
-  };
-
   const openModal = () => {
     setOpenModal(true);
   };
 
   const closeModal = () => {
     setOpenModal(false);
-  };
-
-  const handleModalData = (image, price, id) => {
-    setModalImage(image);
-    setPrice(price);
-    setIdd(idd);
   };
 
   const filteredProducts = products.filter(
@@ -131,12 +109,12 @@ function Items({ addToCart, select }) {
         </div>
 
         <div className="row">
-          {console.log(products)}
+          {console.log(filteredProducts)}
           {filteredProducts.map((data, idx) => (
             <div className="col-lg-3 col-md-6" key={idx}>
               <div className="single-products">
                 <div className="products-image">
-                  <img src={data.image?.fields.file.url} alt="image" />
+                  <img src={data.images?.[0].fields.file.url} alt="image" />
                   {/* <ul>
                     <li>
                       <Link href="#">
@@ -255,12 +233,7 @@ function Items({ addToCart, select }) {
       </div>
 
       {modalOpen ? (
-        <QuickView
-          closeModal={closeModal}
-          idd={idd}
-          image={modalImage}
-          price={price}
-        />
+        <QuickView closeModal={closeModal} image={modalImage} price={price} />
       ) : (
         ""
       )}

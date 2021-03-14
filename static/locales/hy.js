@@ -7,4 +7,6 @@ export default {
   blog: "Բլոգ",
   contact: "Հետադարձ կապ",
   all: "Բոլորը",
+  products: "Ապրանքներ",
+  productDetails: "Ապրանքի մանրամասերը",
 };
