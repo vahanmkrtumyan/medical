@@ -6,4 +6,5 @@ export default {
   products: "Товары",
   blog: "Блог",
   contact: "Связаться с нами",
+  all: "Все",
 };
