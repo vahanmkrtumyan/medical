@@ -25,11 +25,11 @@ function ProductContent({ selectedProduct }) {
                 slightly believable.
               </p>
 
-              <div className="availability">
+              {/* <div className="availability">
                 Availability: <span>In Stock</span>
-              </div>
+              </div> */}
 
-              <form onSubmit={() => console.log("asdasd")}>
+              {/* <form onSubmit={() => console.log("asdasd")}>
                 <div className="quantity">
                   <span>Quantity:</span>
 
@@ -57,14 +57,14 @@ function ProductContent({ selectedProduct }) {
                   title="Add to Wishlist"
                 >
                   <Icon.Heart />
-                </a>
+                </a> */}
 
-                <div className="buy-btn">
-                  <a href="#" className="btn btn-primary">
-                    Buy it Now
-                  </a>
-                </div>
-              </form>
+              <div className="buy-btn">
+                <a href="#" className="btn btn-primary">
+                  Buy it Now
+                </a>
+              </div>
+              {/* </form> */}
             </div>
           </div>
 

@@ -13,8 +13,8 @@ var contentful = require("contentful");
 
 function Items({ select }) {
   var client = contentful.createClient({
-    space: "tdncve35dqgo",
-    accessToken: "Y5WOuE5deTa9j8BmOeH7fBBR045uEuBB6WU0cT9Qf2o",
+    space: "y5qbs5ztl3e9",
+    accessToken: "HTkzIKJ_To1Umwref3J-pif70ReuHPgOEAaFrLSW1jk",
   });
 
   const locales = {
@@ -74,7 +74,7 @@ function Items({ select }) {
       !selectedCategory || product.category.fields.name === selectedCategory
   );
 
-  console.log(selectedCategory);
+  console.log({ categories });
 
   return (
     <section className="shop-area ptb-80">
@@ -192,7 +192,7 @@ function Items({ select }) {
             </div>
           ))}
 
-          <div className="col-lg-12 col-md-12">
+          {/* <div className="col-lg-12 col-md-12">
             <div className="pagination-area">
               <nav aria-label="Page navigation">
                 <ul className="pagination justify-content-center">
@@ -228,7 +228,7 @@ function Items({ select }) {
                 </ul>
               </nav>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
