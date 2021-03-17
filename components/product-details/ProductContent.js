@@ -7,7 +7,27 @@ import ProductImage from "./ProductImage";
 import { useRouter } from "next/router";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
-import parse from "html-react-parser";
+// onSubmit = (e) => {
+//   e.preventDefault();
+//   const data = this.state.formFields;
+//   fetch('/api/contact', {
+//       method: 'post',
+//       headers: {
+//           'Accept': 'application/json, text/plain, */*',
+//           'Content-Type': 'application/json'
+//       },
+//       body: JSON.stringify(data)
+//   }).then(res => {
+//       res.status === 200 ? this.setState({ submitted: true }) : ''
+//       let formFields = Object.assign({}, this.state.formFields);
+//       formFields.name = '';
+//       formFields.email = '';
+//       formFields.phone = '';
+//       formFields.subject = '';
+//       formFields.text = '';
+//       this.setState({formFields});
+//   });
+// }
 
 function ProductContent({ selectedProduct }) {
   const router = useRouter();
