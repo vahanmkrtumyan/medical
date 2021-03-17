@@ -1,12 +1,18 @@
 import React, { useState } from "react";
-import * as Icon from "react-feather";
 import { connect } from "react-redux";
 import { addQuantityWithNumber } from "../../store/actions/cartActions";
 import { ToastContainer, toast } from "react-toastify";
 import DetailsTab from "./DetailsTab";
 import ProductImage from "./ProductImage";
+import { useRouter } from "next/router";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+
+import parse from "html-react-parser";
 
 function ProductContent({ selectedProduct }) {
+  const router = useRouter();
+  let { locale } = router;
+  console.log(selectedProduct);
   return (
     <section className="shop-details-area ptb-80">
       <ToastContainer />
@@ -16,19 +22,15 @@ function ProductContent({ selectedProduct }) {
 
           <div className="col-lg-7">
             <div className="products-details">
-              <h3>Wood Pencil</h3>
-
-              <p>
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration in some form, by
-                injected humour, or randomised words which don't look even
-                slightly believable.
-              </p>
-
+              <h3>{selectedProduct[`name_${locale}`]}</h3>
+              <div style={{ maxHeight: "150px", overflow: "auto" }}>
+                {documentToReactComponents(
+                  selectedProduct[`description_${locale}`]
+                )}
+              </div>
               {/* <div className="availability">
                 Availability: <span>In Stock</span>
               </div> */}
-
               {/* <form onSubmit={() => console.log("asdasd")}>
                 <div className="quantity">
                   <span>Quantity:</span>
@@ -58,7 +60,6 @@ function ProductContent({ selectedProduct }) {
                 >
                   <Icon.Heart />
                 </a> */}
-
               <div className="buy-btn">
                 <a href="#" className="btn btn-primary">
                   Buy it Now

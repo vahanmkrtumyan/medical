@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Link from "../common/ActiveLink";
+// import Link from "../common/ActiveLink";
+import Link from "next/link";
 import * as Icon from "react-feather";
 import { useRouter } from "next/router";
 import en from "../../static/locales/en";
@@ -12,7 +13,7 @@ import uk from "../../static/images/united-kingdom.svg";
 export default function DefaultStyle() {
   const [collapsed, setCollapsed] = useState(true);
   const router = useRouter();
-  let { pathname, locale } = router;
+  let { pathname, locale, query } = router;
 
   const locales = {
     hy,
@@ -27,8 +28,6 @@ export default function DefaultStyle() {
   };
 
   const t = (verse) => locales[locale][verse];
-
-  console.log(t("title"));
 
   useEffect(() => {
     let elementId = document.getElementById("navbar");
@@ -58,7 +57,12 @@ export default function DefaultStyle() {
     layOutCls = "p-relative";
   }
 
-  console.log({ router });
+  const href = query.name
+    ? {
+        pathname: "",
+        query: { name: query.name },
+      }
+    : "";
 
   return (
     <header id="header" className="navbar-style-three agency-navbar">
@@ -135,18 +139,18 @@ export default function DefaultStyle() {
                   </a>
                   <ul className="dropdown_menu">
                     <li className="nav-item">
-                      <Link activeClassName="active" href="" locale="hy">
+                      <Link activeClassName="active" href={href} locale="hy">
                         <a className="nav-link">Հայերեն</a>
                       </Link>
                     </li>
 
                     <li className="nav-item">
-                      <Link activeClassName="active" href="" locale="en">
+                      <Link activeClassName="active" href={href} locale="en">
                         <a className="nav-link">English</a>
                       </Link>
                     </li>
                     <li className="nav-item">
-                      <Link activeClassName="active" href="" locale="ru">
+                      <Link activeClassName="active" href={href} locale="ru">
                         <a className="nav-link">Русский</a>
                       </Link>
                     </li>

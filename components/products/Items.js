@@ -84,7 +84,7 @@ function Items({ select }) {
           <div className="row align-items-center">
             <div className="col-lg-9 col-md-7">
               <div className="woocommerce-result-count">
-                <p>Showing 1-8 of 14 results</p>
+                {/* <p>Showing 1-8 of 14 results</p> */}
               </div>
             </div>
 
