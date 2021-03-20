@@ -7,6 +7,7 @@ a:focus {
   background-color: #f48665;
   -webkit-box-shadow: 0 13px 27px 0 rgba(244, 134, 101, 0.25);
   box-shadow: 0 13px 27px 0 rgba(244, 134, 101, 0.25);
+  cursor: pointer;
 }
 
 .btn-primary:hover,

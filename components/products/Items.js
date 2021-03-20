@@ -50,9 +50,8 @@ function Items({ select }) {
         content_type: "product",
       })
       .then(function(entries) {
-        console.log(entries);
         const fetchedProducts = entries.items.map(function(entry) {
-          return entry.fields;
+          return { ...entry.fields, id: entry.sys.id };
         });
         setProducts(fetchedProducts);
       });
@@ -74,8 +73,6 @@ function Items({ select }) {
       !selectedCategory || product.category.fields.name === selectedCategory
   );
 
-  console.log({ categories });
-
   return (
     <section className="shop-area ptb-80">
       <ToastContainer />
@@ -88,7 +85,7 @@ function Items({ select }) {
               </div>
             </div>
 
-            <div className="col-lg-3 col-md-5">
+            <div className="col-lg-4 col-md-5">
               <div className="woocommerce-topbar-ordering">
                 <select
                   className="form-control"
@@ -109,9 +106,8 @@ function Items({ select }) {
         </div>
 
         <div className="row">
-          {console.log(filteredProducts)}
           {filteredProducts.map((data, idx) => (
-            <div className="col-lg-3 col-md-6" key={idx}>
+            <div className="col-lg-4 col-md-6" key={idx}>
               <div className="single-products">
                 <div className="products-image">
                   <img src={data.images?.[0].fields.file.url} alt="image" />
@@ -153,7 +149,7 @@ function Items({ select }) {
                     className="product-title"
                     onClick={() => {
                       select(data);
-                      router.push(`/product-details/${data.name}`);
+                      router.push(`/product-details/${data.id}`);
                     }}
                   >
                     {data[`name_${locale}`]}

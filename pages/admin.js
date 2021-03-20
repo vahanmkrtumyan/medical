@@ -20,8 +20,6 @@ export default function admin() {
   const provider = new firebase.auth.GoogleAuthProvider();
   var db = firebase.firestore();
 
-  console.log(categories);
-
   function SignIn() {
     firebase
       .auth()
@@ -55,8 +53,6 @@ export default function admin() {
       .signOut()
       .then(() => {
         setUser("signedOut");
-
-        console.log("signOut");
         // Sign-out successful.
       })
       .catch((error) => {
@@ -73,7 +69,6 @@ export default function admin() {
   });
 
   function RemoveCategory(category) {
-    console.log(category);
     db.collection("categories")
       .doc(category.id)
       .delete()

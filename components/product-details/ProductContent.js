@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { addQuantityWithNumber } from "../../store/actions/cartActions";
 import { ToastContainer, toast } from "react-toastify";
@@ -6,6 +6,10 @@ import DetailsTab from "./DetailsTab";
 import ProductImage from "./ProductImage";
 import { useRouter } from "next/router";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import useTranslation from "../../translation";
+import EnquiryModal from "../admin/EnquiryModal";
+
+var contentful = require("contentful");
 
 // onSubmit = (e) => {
 //   e.preventDefault();
@@ -31,22 +35,41 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 function ProductContent({ selectedProduct }) {
   const router = useRouter();
-  let { locale } = router;
-  console.log(selectedProduct);
+  let { locale, query } = router;
+  const [product, setProduct] = useState();
+  const [open, setOpen] = useState(false);
+
+  const t = useTranslation;
+
+  useEffect(() => {
+    if (selectedProduct) {
+      setProduct(selectedProduct);
+    } else {
+      client
+        .getEntry(query.name)
+        .then((entry) => setProduct({ ...entry.fields, id: query.name }))
+        .catch((err) => console.log(err));
+    }
+  }, []);
+
+  var client = contentful.createClient({
+    space: "y5qbs5ztl3e9",
+    accessToken: "HTkzIKJ_To1Umwref3J-pif70ReuHPgOEAaFrLSW1jk",
+  });
+
+  console.log(router);
   return (
     <section className="shop-details-area ptb-80">
       <ToastContainer />
       <div className="container">
         <div className="row align-items-center">
-          <ProductImage images={selectedProduct?.images || []} />
+          <ProductImage images={product?.images || []} />
 
           <div className="col-lg-7">
             <div className="products-details">
-              <h3>{selectedProduct[`name_${locale}`]}</h3>
+              <h3>{product?.[`name_${locale}`]}</h3>
               <div style={{ maxHeight: "150px", overflow: "auto" }}>
-                {documentToReactComponents(
-                  selectedProduct[`description_${locale}`]
-                )}
+                {documentToReactComponents(product?.[`description_${locale}`])}
               </div>
               {/* <div className="availability">
                 Availability: <span>In Stock</span>
@@ -80,18 +103,21 @@ function ProductContent({ selectedProduct }) {
                 >
                   <Icon.Heart />
                 </a> */}
-              <div className="buy-btn">
-                <a href="#" className="btn btn-primary">
-                  Buy it Now
-                </a>
+              <div className="btn btn-primary" onClick={() => setOpen(true)}>
+                {/* <a href="#" className="btn btn-primary"> */}
+                {t("enquiry")}
+                {/* </a> */}
               </div>
               {/* </form> */}
             </div>
           </div>
 
-          <DetailsTab />
+          {/* <DetailsTab /> */}
         </div>
       </div>
+      {open && (
+        <EnquiryModal product={product} closeModal={() => setOpen(false)} />
+      )}
     </section>
   );
 }

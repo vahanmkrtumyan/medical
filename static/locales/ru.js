@@ -9,4 +9,11 @@ export default {
   all: "Все",
   products: "Продукты",
   productDetails: "Информация о продукте",
+  enquiry: "Отправить запрос",
+  name: "Имя",
+  phone: "Телефон",
+  message: "Ваше сообщение",
+  GladToAssist: "Будем рады Вам помочь!",
+  subject: "Тема",
+  Products: "Продукты",
 };

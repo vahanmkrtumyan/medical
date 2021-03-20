@@ -1,4 +1,5 @@
 import React from "react";
+import useTranslation from "../../translation";
 
 export default function PageTitle() {
   return (
@@ -6,7 +7,7 @@ export default function PageTitle() {
       <div className="d-table">
         <div className="d-table-cell">
           <div className="container">
-            <h2>Products</h2>
+            <h2>{useTranslation("Products")}</h2>
           </div>
         </div>
       </div>

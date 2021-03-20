@@ -30,7 +30,7 @@ export class ProductImage extends Component {
   };
   render() {
     return (
-      <div className="col-lg-5">
+      <div className="col-lg-12">
         <div className="products-details-image">
           <ul className="slickslide">
             <div>
@@ -38,7 +38,7 @@ export class ProductImage extends Component {
                 asNavFor={this.state.nav2}
                 ref={(slider) => (this.slider1 = slider)}
                 arrows={false}
-                dots={false}
+                dots={true}
                 slidesToShow={1}
                 fade={false}
                 autoplay={true}

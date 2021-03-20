@@ -9,4 +9,12 @@ export default {
   all: "Բոլորը",
   products: "Ապրանքներ",
   productDetails: "Ապրանքի մանրամասերը",
+  enquiry: "Ուղարկել հարցում",
+  name: "Անուն",
+  phone: "Հեռախոս",
+  message: "Ձեր հաղորդագրությունը",
+  GetInTouch: "Կապվեք մեզ հետ",
+  GladToAssist: "Մենք ուրախ կլինենք օգնել ձեզ",
+  subject: "Թեմա",
+  Products: "Ապրանքներ",
 };
