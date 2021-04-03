@@ -117,9 +117,11 @@ export default function DefaultStyle() {
                 </li>
 
                 <li className="nav-item">
-                  <a href="/products" className="nav-link">
-                    {t("products")}
-                  </a>
+                  <Link activeClassName="active" href="/products">
+                    <a href="#" className="nav-link">
+                      {t("products")}
+                    </a>
+                  </Link>
                 </li>
 
                 <li className="nav-item">

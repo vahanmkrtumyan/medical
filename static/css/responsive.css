@@ -1165,6 +1165,9 @@
     margin-right: 10px;
     margin-top: -20px;
   }
+  .agency-services-box img {
+    height: 240px;
+  }
   .agency-services-box .content h3 {
     font-size: 17px;
   }

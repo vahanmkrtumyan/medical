@@ -60,7 +60,7 @@ export default function ContactBody() {
                 <div className="icon">
                   <Icon.Mail />
                 </div>
-                <h3>Mail Here</h3>
+                <h3>{useTranslation("mailHere")}</h3>
                 <p>
                   <Link href="#">
                     <a>admin@startp.com</a>
@@ -79,7 +79,7 @@ export default function ContactBody() {
                 <div className="icon">
                   <Icon.Map />
                 </div>
-                <h3>Visit Here</h3>
+                <h3>{useTranslation("visitHere")}</h3>
                 <p>
                   27 Division St, New York, NY 10002, <br /> USA
                 </p>
@@ -91,7 +91,7 @@ export default function ContactBody() {
                 <div className="icon">
                   <Icon.Phone />
                 </div>
-                <h3>Call Here</h3>
+                <h3>{useTranslation("call")}</h3>
                 <p>
                   <Link href="#">
                     <a>+123 456 7890</a>

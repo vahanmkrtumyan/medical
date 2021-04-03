@@ -8426,7 +8426,9 @@ Agency Services CSS
 }
 
 .agency-services-box img {
+  height: 240px;
   border-radius: 7px;
+  object-fit: cover;
 }
 
 .agency-services-box .content {

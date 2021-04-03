@@ -1,22 +1,21 @@
-import React, { Component } from 'react';
-import Link from 'next/link';
+import React, { Component } from "react";
+import Link from "next/link";
+import useTranslation from "../../translation";
 
-class AgencyCtaArea extends Component {
-    render() {
-        return (
-            <div className="agency-cta-area ptb-80">
-                <div className="container">
-                    <div className="agency-cta-content">
-                        <h2>Do you have any projects?</h2>
+export default function AgencyCtaArea() {
+  const t = useTranslation;
 
-                        <Link href="#">
-                            <a className="btn btn-gradient">Contact Us</a>
-                        </Link>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+  return (
+    <div className="agency-cta-area ptb-80">
+      <div className="container">
+        <div className="agency-cta-content">
+          <h2>{t("anyQuestions")}</h2>
+
+          <Link href="/contact">
+            <a className="btn btn-gradient">{t("contact")}</a>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
 }
-
-export default AgencyCtaArea;

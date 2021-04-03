@@ -29,7 +29,13 @@ export default {
   ourServices: "Our Services",
   servicesText:
     "We provide high quality services that will satisfy our most demanding customers.",
-  service1: "Medical techniques service",
+  service1: "Service of medical equipment",
   service2: "Комплексное оснащение кабинетов",
   service3: "Construction of medical centers",
+  discover: "Discover more",
+  anyQuestions: "Do you have any questions?",
+  address: "Address",
+  visitHere: "Visit here",
+  call: "Call here",
+  mailHere: "Mail here",
 };
