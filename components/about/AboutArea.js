@@ -47,6 +47,16 @@ export default function About() {
             </div>
           </div>
         </div>
+        <div className="about-inner-area">
+          <div className="row">
+            {/* <div className="col-lg-6 col-md-6"> */}
+            <div className="about-text">
+              <h3>{t("career")}</h3>
+              <p>{t("careerText")}</p>
+            </div>
+            {/* </div> */}
+          </div>
+        </div>
       </div>
     </section>
   );
