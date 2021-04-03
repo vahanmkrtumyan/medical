@@ -48,18 +48,23 @@ export default class Footer extends React.Component {
                       <a>Latest News</a>
                     </Link>
                   </li>
+                  <li>
+                    <Link href="/contact">
+                      <a>Contact Us</a>
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
 
             <div className="col-lg-3 col-md-6">
               <div className="single-footer-widget">
-                <h3>Support</h3>
+                {/* <h3>Support</h3> */}
                 <ul className="list">
                   <li>
-                    <Link href="/contact">
+                    {/* <Link href="/contact">
                       <a>Contact Us</a>
-                    </Link>
+                    </Link> */}
                   </li>
                 </ul>
               </div>

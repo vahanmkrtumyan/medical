@@ -49,7 +49,7 @@ class AboutArea extends Component {
           <img src={require("../../static/images/shape2.svg")} alt="shape" />
         </div>
         <div className="shape3">
-          <img src={require("../../static/images/shape3.svg")} alt="shape" />
+          <img src={require("../../static/images/syringe.png")} alt="shape" />
         </div>
         <div className="shape6 rotateme">
           <img src={require("../../static/images/shape4.svg")} alt="shape" />
