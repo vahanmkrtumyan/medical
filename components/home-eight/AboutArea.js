@@ -10,7 +10,7 @@ export default function AboutArea() {
     <section className="agency-about-area">
       <div className="container-fluid">
         <div className="row align-items-center">
-          <div className="col-lg-6 col-md-12">
+          <div className="col-lg-6 col-md-12 hideSmall">
             <div className="agency-about-img">
               <Image
                 width="832px"

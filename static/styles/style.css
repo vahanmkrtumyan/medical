@@ -515,10 +515,9 @@ Navbar CSS
 
 .startp-nav {
   background: transparent;
-  position: absolute;
   top: 0;
   left: 0;
-  padding-top: 15px;
+  padding: 15px 0 8px;
   width: 100%;
   z-index: 999;
   height: auto;
@@ -1240,6 +1239,13 @@ Main Banner CSS
 /*================================================
 Boxes CSS
 =================================================*/
+
+@media only screen and (max-width: 992px) {
+  .hideSmall {
+    display: none;
+  }
+}
+
 .boxes-area {
   position: relative;
   padding-bottom: 80px;
@@ -6704,6 +6710,7 @@ Footer CSS
 
 .single-footer-widget .logo {
   margin-bottom: 20px;
+  padding-left: 24px;
 }
 
 .single-footer-widget .logo a {

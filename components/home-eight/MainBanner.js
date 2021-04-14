@@ -5,21 +5,21 @@ import Image from "next/image";
 class MainBanner extends Component {
   render() {
     return (
-      <div className="agency-main-banner">
+      <div className="agency-main-banner" style={{ marginBottom: "16px" }}>
         <div className="container-fluid">
           <div className="row align-items-center">
             <div className="col-lg-6 col-md-12">
               <div className="agency-banner-content">
-                <span className="sub-title">We offer</span>
-                <h1>Medical equipments</h1>
-                <p>
+                <span className="sub-title">Мы предлагаем</span>
+                <h1>Медицинское оборудование</h1>
+                {/* <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore.
-                </p>
+                </p> */}
 
-                <Link href="#">
+                {/* <Link href="#">
                   <a className="btn btn-secondary">Get Started</a>
-                </Link>
+                </Link> */}
               </div>
             </div>
 

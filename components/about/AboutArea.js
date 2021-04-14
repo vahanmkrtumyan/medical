@@ -52,7 +52,7 @@ export default function About() {
             {/* <div className="col-lg-6 col-md-6"> */}
             <div className="about-text">
               <h3>{t("career")}</h3>
-              <p>{t("careerText")}</p>
+              <p>{t("careerText0")}</p>
             </div>
             {/* </div> */}
           </div>

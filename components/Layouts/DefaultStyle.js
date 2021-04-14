@@ -130,7 +130,7 @@ export default function DefaultStyle() {
                   </Link>
                 </li>
 
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <a
                     href="/products"
                     className="nav-link"
@@ -157,7 +157,7 @@ export default function DefaultStyle() {
                       </Link>
                     </li>
                   </ul>
-                </li>
+                </li> */}
 
                 {/* <li className="nav-item">
                     <Link activeClassName="active" href="/contact">

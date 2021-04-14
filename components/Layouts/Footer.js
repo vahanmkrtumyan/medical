@@ -8,30 +8,24 @@ export default function Footer() {
 
   return (
     <footer className="footer-area bg-f7fafd">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-3 col-md-6">
-            <div className="single-footer-widget">
-              <div className="logo">
-                <Link href="#">
-                  <a>
-                    <img
-                      src={require("../../static/images/logo.png")}
-                      alt="logo"
-                    />
-                  </a>
-                </Link>
-              </div>
-              {/* <p>
+      <div className="single-footer-widget">
+        <div className="logo">
+          <Link href="#">
+            <a>
+              <img src={require("../../static/images/logo.png")} alt="logo" />
+            </a>
+          </Link>
+        </div>
+        {/* <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
               do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Ut enim ad minim veniam, quis nostrud exercitation ullamco
               laboris nisi.
             </p> */}
-            </div>
-          </div>
-
-          <div className="col-lg-3 col-md-6">
+      </div>
+      <div className="container" style={{ paddingBottom: "32px" }}>
+        <div className="row">
+          <div className="col-lg-6 col-md-6">
             <div className="single-footer-widget pl-5">
               <h3>Company</h3>
               <ul className="list">
@@ -54,20 +48,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="col-lg-3 col-md-6">
-            <div className="single-footer-widget">
-              {/* <h3>Support</h3> */}
-              <ul className="list">
-                <li>
-                  {/* <Link href="/contact">
-                  <a>Contact Us</a>
-                </Link> */}
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="col-lg-3 col-md-6">
+          <div className="col-lg-6 col-md-6">
             <div className="single-footer-widget">
               <h3>{t("address")}</h3>
 
@@ -91,7 +72,7 @@ export default function Footer() {
                   </Link>
                 </li>
               </ul>
-              <ul className="social-links">
+              {/* <ul className="social-links">
                 <li>
                   <Link href="#">
                     <a className="facebook">
@@ -120,13 +101,7 @@ export default function Footer() {
                     </a>
                   </Link>
                 </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="col-lg-12 col-md-12">
-            <div className="copyright-area">
-              <p>Copyright @2021 T-Med. All rights reserved</p>
+              </ul> */}
             </div>
           </div>
         </div>

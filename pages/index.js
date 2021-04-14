@@ -24,13 +24,13 @@ export default () => (
       </Placeholder>
       <HeaderThree />
       <MainBanner />
-      <WhatWeOffer />
+      {/* <WhatWeOffer /> */}
       <AboutArea />
       <Services />
-      <Funfacts />
-      <Projects />
-      <Feedback />
-      <BlogCard />
+      {/* <Funfacts /> */}
+      {/* <Projects /> */}
+      {/* <Feedback />
+      <BlogCard /> */}
       <AgencyCtaArea />
       <Footer />
       <GoTop scrollStepInPx="50" delayInMs="16.66" />
