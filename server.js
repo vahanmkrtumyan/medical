@@ -42,8 +42,8 @@ app.prepare().then(() => {
   server.post("/api/stripe/checkout", async (req, res) => {
     await stripe.charges.create({
       amount: req.body.amount,
-      currency: "usd",
-      description: "StartP Next Landing Page Templates",
+      currency: "amd",
+      description: "T Med",
       source: req.body.token.id,
     });
     res.send({});

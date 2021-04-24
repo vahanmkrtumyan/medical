@@ -63,12 +63,7 @@ export default function ContactBody() {
                 <h3>{useTranslation("mailHere")}</h3>
                 <p>
                   <Link href="#">
-                    <a>admin@startp.com</a>
-                  </Link>
-                </p>
-                <p>
-                  <Link href="#">
-                    <a>info@startp.com</a>
+                    <a>info@tmed.am</a>
                   </Link>
                 </p>
               </div>

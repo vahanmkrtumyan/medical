@@ -9,6 +9,7 @@ import ru from "../../static/locales/ru";
 import armenia from "../../static/images/armenia.svg";
 import russia from "../../static/images/russia.svg";
 import uk from "../../static/images/united-kingdom.svg";
+import logo from "../../static/images/logo.svg";
 
 export default function DefaultStyle() {
   const [collapsed, setCollapsed] = useState(true);
@@ -70,8 +71,8 @@ export default function DefaultStyle() {
         <div className="container-fluid">
           <nav className="navbar navbar-expand-md navbar-light">
             <Link href="/">
-              <a className="navbar-brand">
-                <img src={require("../../static/images/logo.png")} alt="logo" />
+              <a className="navbar-brand" style={{ paddingTop: "0" }}>
+                <img style={{ width: "48px" }} src={logo} alt="logo" />
               </a>
             </Link>
 
@@ -130,7 +131,7 @@ export default function DefaultStyle() {
                   </Link>
                 </li>
 
-                {/* <li className="nav-item">
+                <li className="nav-item">
                   <a
                     href="/products"
                     className="nav-link"
@@ -157,7 +158,7 @@ export default function DefaultStyle() {
                       </Link>
                     </li>
                   </ul>
-                </li> */}
+                </li>
 
                 {/* <li className="nav-item">
                     <Link activeClassName="active" href="/contact">

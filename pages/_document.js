@@ -10,7 +10,7 @@ class MyDocument extends Document {
           <link
             rel="icon"
             type="image/png"
-            href={require("../static/images/favicon.png")}
+            href={require("../static/images/logo.svg")}
           ></link>
         </Head>
         <body>

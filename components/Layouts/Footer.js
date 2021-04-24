@@ -9,13 +9,17 @@ export default function Footer() {
   return (
     <footer className="footer-area bg-f7fafd">
       <div className="single-footer-widget">
-        <div className="logo">
+        {/* <div className="logo" style={{ width: "64px", marginLeft: "10%" }}>
           <Link href="#">
             <a>
-              <img src={require("../../static/images/logo.png")} alt="logo" />
+              <img
+                src={require("../../static/images/logo.svg")}
+                style={{ width: "64px", marginLeft: "20%" }}
+                alt="logo"
+              />
             </a>
           </Link>
-        </div>
+        </div> */}
         {/* <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
               do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -61,7 +65,7 @@ export default function Footer() {
                   <Icon.Mail />
                   Email:{" "}
                   <Link href="#">
-                    <a>startp@gmail.com</a>
+                    <a>info@tmed.com</a>
                   </Link>
                 </li>
                 <li>

@@ -26,8 +26,8 @@ class Payments extends React.Component {
       <React.Fragment>
         <div className="order-btn">
           <StripeCheckout
-            name="StartP"
-            description="StartP Next Landing Page Templates"
+            name="T-Med"
+            description="T-Med Next Landing Page Templates"
             amount={amount}
             currency="USD"
             token={onToken}
