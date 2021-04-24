@@ -26,7 +26,7 @@ export default () => (
       <MainBanner />
       {/* <WhatWeOffer /> */}
       <AboutArea />
-      <Services />
+      <Services id="services" />
       {/* <Funfacts /> */}
       {/* <Projects /> */}
       {/* <Feedback />

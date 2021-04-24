@@ -76,7 +76,8 @@ export default function ContactBody() {
                 </div>
                 <h3>{useTranslation("visitHere")}</h3>
                 <p>
-                  27 Division St, New York, NY 10002, <br /> USA
+                  {useTranslation("addressText")}
+                  {/* 27 Division St, New York, NY 10002, <br /> USA */}
                 </p>
               </div>
             </div>
@@ -89,12 +90,7 @@ export default function ContactBody() {
                 <h3>{useTranslation("call")}</h3>
                 <p>
                   <Link href="#">
-                    <a>+123 456 7890</a>
-                  </Link>
-                </p>
-                <p>
-                  <Link href="#">
-                    <a>+241 452 4526</a>
+                    <a>+374 ** ** ** **</a>
                   </Link>
                 </p>
               </div>
@@ -104,7 +100,7 @@ export default function ContactBody() {
       </section>
 
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8619.652291129529!2d44.49869918736043!3d40.197777202756704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abd143343ef91%3A0x96cd93b97fd73a7e!2s28%20Gulakyan%20St%2C%20Yerevan%200033%2C%20Armenia!5e0!3m2!1sen!2s!4v1616243545291!5m2!1sen!2s"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.4831929811817!2d44.510084315662624!3d40.17605897939373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abcf9dab0c531%3A0x44c0e42c270b565b!2s26%2C%201%20Vazgen%20Sargsyan%20St%2C%20Yerevan%200010%2C%20Armenia!5e0!3m2!1sen!2s!4v1619265260622!5m2!1sen!2s"
         width="600"
         height="450"
         style={{ border: 0, width: "100%" }}
@@ -155,7 +151,7 @@ export default function ContactBody() {
                         className="form-control"
                         required
                         data-error="Please enter your email"
-                        placeholder="Email"
+                        placeholder={useTranslation("email")}
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                       />
@@ -209,7 +205,7 @@ export default function ContactBody() {
 
                   <div className="col-lg-12 col-md-12">
                     <button type="submit" className="btn btn-primary">
-                      Send Message
+                      {useTranslation("send")}
                     </button>
 
                     <div id="msgSubmit" className="h3 text-center hidden"></div>

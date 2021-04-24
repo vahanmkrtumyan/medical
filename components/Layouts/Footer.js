@@ -59,20 +59,20 @@ export default function Footer() {
               <ul className="footer-contact-info">
                 <li>
                   <Icon.MapPin />
-                  27 Division St, New York, <br /> NY 10002, USA
+                  {t("addressText")}
                 </li>
                 <li>
                   <Icon.Mail />
-                  Email:{" "}
+                  {t("email")}:{" "}
                   <Link href="#">
-                    <a>info@tmed.com</a>
+                    <a>info@tmed.am</a>
                   </Link>
                 </li>
                 <li>
                   <Icon.PhoneCall />
-                  Phone:{" "}
+                  {t("phone")}:{" "}
                   <Link href="#">
-                    <a>+ (321) 984 754</a>
+                    <a>+ (374) ** ** ** **</a>
                   </Link>
                 </li>
               </ul>

@@ -26,8 +26,7 @@ export default function AboutArea() {
               {/* <span className="sub-title">{t("aboutUs")}</span> */}
               <h2>{t("aboutUs")}</h2>
               <div className="bar"></div>
-              <p>{t("aboutText")}</p>
-
+              <p>{t("aboutUsText")}</p>
               <Link href="/about">
                 <a className="btn btn-secondary">{t("discover")}</a>
               </Link>

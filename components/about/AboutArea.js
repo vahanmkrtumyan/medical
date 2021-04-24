@@ -19,13 +19,12 @@ export default function About() {
 
           <div className="col-lg-6 col-md-12">
             <div className="about-content">
-              <div className="section-title">
+              {/* <div className="section-title">
                 <h2>{t("aboutUs")}</h2>
                 <div className="bar"></div>
-                <p></p>
-              </div>
+              </div> */}
 
-              <p>{t("aboutText")}</p>
+              <p>{t("aboutUsText")}</p>
             </div>
           </div>
         </div>
@@ -43,6 +42,7 @@ export default function About() {
               <div className="about-text">
                 <h3>{t("ourClients")}</h3>
                 <p>{t("ourClientsText")}</p>
+                <p>{t("ourClientsText1")}</p>
               </div>
             </div>
           </div>
@@ -52,7 +52,8 @@ export default function About() {
             {/* <div className="col-lg-6 col-md-6"> */}
             <div className="about-text">
               <h3>{t("career")}</h3>
-              <p>{t("careerText0")}</p>
+              <p>{t("careerText")}</p>
+              <p>{t("careerText1")}</p>
             </div>
             {/* </div> */}
           </div>

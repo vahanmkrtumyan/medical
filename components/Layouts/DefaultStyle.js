@@ -8,7 +8,7 @@ import hy from "../../static/locales/hy";
 import ru from "../../static/locales/ru";
 import armenia from "../../static/images/armenia.svg";
 import russia from "../../static/images/russia.svg";
-import uk from "../../static/images/united-kingdom.svg";
+import uk from "../../static/images/united-states.svg";
 import logo from "../../static/images/logo.svg";
 
 export default function DefaultStyle() {
@@ -109,13 +109,13 @@ export default function DefaultStyle() {
                   </Link>
                 </li>
 
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <Link activeClassName="active" href="/services">
                     <a href="#" className="nav-link">
                       {t("services")}
                     </a>
                   </Link>
-                </li>
+                </li> */}
 
                 <li className="nav-item">
                   <Link activeClassName="active" href="/products">
