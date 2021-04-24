@@ -125,11 +125,11 @@ export default function DefaultStyle() {
                   </Link>
                 </li>
 
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <Link activeClassName="active" href="/blog">
                     <a className="nav-link">{t("blog")}</a>
                   </Link>
-                </li>
+                </li> */}
 
                 <li className="nav-item">
                   <a
