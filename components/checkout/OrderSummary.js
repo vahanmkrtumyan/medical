@@ -4,7 +4,6 @@ import Link from "next/link";
 
 class OrderSummary extends Component {
   render() {
-    let totalAmount = this.props.total.toFixed(2);
     return (
       <div className="col-lg-6 col-md-12">
         <div className="order-details">

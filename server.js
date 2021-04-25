@@ -2,7 +2,6 @@ const express = require("express");
 const next = require("next");
 const path = require("path");
 const bodyParser = require("body-parser");
-const keys = require("./server/config/keys");
 const mailer = require("./mailer");
 
 const dev = process.env.NODE_ENV !== "production";

@@ -15,7 +15,13 @@ export default function ContactBody() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    const data = this.state.formFields;
+    const data = {
+      email,
+      name,
+      phone,
+      text,
+      subject,
+    };
     fetch("/api/contact", {
       method: "post",
       headers: {
@@ -104,7 +110,7 @@ export default function ContactBody() {
         width="600"
         height="450"
         style={{ border: 0, width: "100%" }}
-        allowfullscreen=""
+        allowFullScreen=""
         loading="lazy"
       ></iframe>
 

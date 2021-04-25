@@ -5,7 +5,7 @@ const transporter = nodemailer.createTransport(
   sgTransport({
     auth: {
       api_key:
-        "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",
+        "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",
     },
   })
 );
@@ -22,7 +22,7 @@ const send = ({ name, email, phone, subject, text }) => {
   const from = name && email ? `${name} <${email}>` : `${name || email}`;
 
   const message = {
-    from,
+    from: "vahanmkrtumyan90@gmail.com",
     to: "vahanmkrtumyan@gmail.com",
     subject: subject,
     text: textBody,
