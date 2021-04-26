@@ -39,8 +39,8 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services">
-                    <a>{t("services")}</a>
+                  <Link href="/products">
+                    <a>{t("products")}</a>
                   </Link>
                 </li>
                 <li>
