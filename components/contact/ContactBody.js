@@ -3,6 +3,7 @@ import Link from "next/link";
 import * as Icon from "react-feather";
 import "isomorphic-fetch";
 import useTranslation from "../../translation";
+import axios from "axios";
 
 export default function ContactBody() {
   const [email, setEmail] = useState();
@@ -13,7 +14,7 @@ export default function ContactBody() {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     const data = {
       email,
@@ -22,28 +23,39 @@ export default function ContactBody() {
       text,
       subject,
     };
-    fetch("/api/contact", {
-      method: "post",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }).then((res) => {
-      res.status === 200 ? setSubmitted(true) : "";
+    const url = `/api/contact`;
+    const response = await axios.post(url, data);
+    if (response) {
+      response.status === 200 ? setSubmitted(true) : "";
       setEmail();
       setName();
       setPhone();
       setText();
       setSubject();
-    });
+    }
+    // fetch("http://localhost:3000/api/contact", {
+    //   method: "post",
+    //   headers: {
+    //     Accept: "application/json, text/plain, */*",
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(data),
+    // }).then((res) => {
+    //   res.status === 200 ? setSubmitted(true) : "";
+    //   setEmail();
+    //   setName();
+    //   setPhone();
+    //   setText();
+    //   setSubject();
+    // });
   };
 
   const successMessage = () => {
     if (submitted) {
       return (
         <div className="alert alert-success">
-          <strong>Thank you!</strong> Your message is send to the owner
+          <strong>${useTranslation("thankYou")}</strong>
+          {useTranslation("thankYouMessage")}
           <button onClick={onHideSuccess} type="button" className="close">
             <span aria-hidden="true">&times;</span>
           </button>

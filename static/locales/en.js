@@ -50,4 +50,6 @@ export default {
   careerText:
     "The company treasures each stuff member, who invests in the development of the common cause. The staff members are professionals in their field, which provides with  opportunity to solve even the most difficult problems. Join our professionals' TEAM. You can send your resume to the following address: hr@t-med.am",
   careerText1: "Vacant position announcement",
+  thankYou: "Thank you",
+  thankYouMessage: " Your message is send to the owner",
 };

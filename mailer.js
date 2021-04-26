@@ -5,7 +5,7 @@ const transporter = nodemailer.createTransport(
   sgTransport({
     auth: {
       api_key:
-        "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",
+        "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",
     },
   })
 );
@@ -21,17 +21,24 @@ const send = ({ name, email, phone, subject, text }) => {
 
   const from = name && email ? `${name} <${email}>` : `${name || email}`;
 
+  console.log({ subject, text, name, email, phone });
+
   const message = {
-    from: "vahanmkrtumyan90@gmail.com",
-    to: "vahanmkrtumyan@gmail.com",
+    from: "vahanmkrtumyan90+1@gmail.com",
+    to: "vahanmkrtumyan90+1@gmail.com",
     subject: subject,
-    text: textBody,
-    replyTo: from,
+    text: text,
+    html: `
+    <b>From:</b> ${name} ${email}<br /> 
+    <b>Number:</b> ${phone} <br /> 
+    <b>Subject:</b> ${subject} <br /> 
+    <b>Text:</b> ${text} 
+`,
   };
 
   return new Promise((resolve, reject) => {
     transporter.sendMail(message, (error, info) => {
-      console.log(error);
+      console.log({ Theerror: error });
       return error ? reject(error) : resolve(info);
     });
   });
