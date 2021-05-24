@@ -72,7 +72,7 @@ export default function DefaultStyle() {
           <nav className="navbar navbar-expand-md navbar-light">
             <Link href="/">
               <a className="navbar-brand" style={{ paddingTop: "0" }}>
-                <img style={{ width: "48px" }} src={logo} alt="logo" />
+                <img style={{ width: "100px" }} src={logo} alt="logo" />
               </a>
             </Link>
 
